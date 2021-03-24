@@ -7,9 +7,24 @@
 
 import UIKit
 import CoreData
+import Swinject
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
+
+    var window: UIWindow?
+
+    private let mainFlowController = MainFlowController()
+
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        // Override point for customization after application launch.
+
+        window = UIWindow()
+        window?.makeKeyAndVisible()
+        window?.rootViewController = mainFlowController.start()
+
+        return true
+    }
 
     // MARK: - Core Data stack
 
