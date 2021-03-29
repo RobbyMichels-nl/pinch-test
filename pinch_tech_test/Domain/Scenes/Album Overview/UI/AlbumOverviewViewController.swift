@@ -10,8 +10,7 @@ import UIKit
 import Swinject
 import RxSwift
 
-protocol AlbumOverviewViewControllerDelegate: AnyObject {
-
+protocol AlbumOverviewViewControllerDelegate: class {
     func albumOverviewViewControllerDidSomething(controller: UIViewController?, album: Album)
 }
 
@@ -37,11 +36,20 @@ class AlbumOverviewViewController: UIViewController {
 private extension AlbumOverviewViewController {
 
     func bindTableView() {
-        tableView.register(UINib(nibName: AlbumOverviewCell.identifier, bundle: nil), forCellReuseIdentifier: AlbumOverviewCell.identifier)
+        tableView.register(
+            UINib(
+                nibName: AlbumOverviewCell.identifier,
+                bundle: nil
+            ),
+            forCellReuseIdentifier: AlbumOverviewCell.identifier
+        )
 
-        viewModel.items.bind(to: tableView.rx.items(cellIdentifier: AlbumOverviewCell.identifier, cellType: AlbumOverviewCell.self)) {
+        viewModel.items.bind(to: tableView.rx.items(
+            cellIdentifier: AlbumOverviewCell.identifier,
+            cellType: AlbumOverviewCell.self
+        )) {
             row, item, cell in
-            cell.viewModel = .init(albumName: item.title)
+            cell.viewModel = AlbumOverviewCellViewModel(albumName: item.title!)
         }.disposed(by: disposeBag)
 
         tableView.rx.modelSelected(Album.self).subscribe(onNext: {
@@ -52,7 +60,6 @@ private extension AlbumOverviewViewController {
     }
 }
 
-// MARK: - Factory
 extension AlbumOverviewViewController {
 
     static func make(_ delegate: AlbumOverviewViewControllerDelegate? = nil, viewModel: AlbumOverviewViewModelProtocol?) -> AlbumOverviewViewController {
@@ -79,41 +86,5 @@ extension AlbumOverviewViewController: CanConfigureViews {
 
         tableView.separatorStyle = .none
         tableView.contentInset = .init(top: -1, left: 0, bottom: 0, right: 0)
-    }
-}
-
-extension Container {
-
-    static var main = Container()
-}
-
-struct AlbumOverviewAssembly: Assembly {
-
-    func assemble(container: Container) {
-        container.register(AlbumServiceProtocol.self, factory: { _ in AlbumService() })
-
-        container.register(GetAlbumsProtocol.self, factory: { _ in GetAlbums(
-            albumService: container.resolve(AlbumServiceProtocol.self))
-        })
-
-        container.register(AlbumOverviewViewModelProtocol.self, factory: {
-            _ in AlbumOverviewViewModel(
-                getAlbums: container.resolve(GetAlbumsProtocol.self)
-            )
-        })
-    }
-}
-
-struct AlbumDetailOverviewAssembly: Assembly {
-
-    func assemble(container: Container) {
-        container.register(FlowController.self, factory: { _ in AlbumDetailOverviewFlowController() })
-    }
-}
-
-struct MainFlowAssembly: Assembly {
-
-    func assemble(container: Container) {
-        container.register(FlowController.self, factory: { _ in AlbumOverviewFlowController() })
     }
 }

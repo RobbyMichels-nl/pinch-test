@@ -7,22 +7,13 @@
 
 import UIKit
 
-struct AlbumOverviewCellViewModel: AlbumOverviewCellViewModelProtocol {
-
-    let albumName: String
-}
-
-protocol AlbumOverviewCellViewModelProtocol {
-    var albumName: String { get }
-}
-
 class AlbumOverviewCell: UITableViewCell {
 
     static let identifier = String(describing: AlbumOverviewCell.self)
 
     @IBOutlet weak var albumNameLabel: UILabel!
 
-    var viewModel: AlbumOverviewCellViewModel? {
+    var viewModel: AlbumOverviewCellViewModelProtocol? {
         didSet {
             albumNameLabel.text = viewModel?.albumName
         }
