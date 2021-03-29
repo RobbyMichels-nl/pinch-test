@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="PhotoOverviewCell" customModule="pinch_tech_test" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="198"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="no-internet-150" translatesAutoresizingMaskIntoConstraints="NO" id="kOS-9C-iVX">
+                    <rect key="frame" x="20" y="52" width="150" height="138"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="150" id="GKH-LR-kgW"/>
+                        <constraint firstAttribute="height" constant="150" id="eg9-Os-Ow2"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label l" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mpz-e0-KC9">
+                    <rect key="frame" x="178" y="108" width="228" height="26.5"/>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="wLj-zz-EiA"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <accessibility key="accessibilityConfiguration" identifier="AlbumDetailCell"/>
+            <constraints>
+                <constraint firstItem="Mpz-e0-KC9" firstAttribute="leading" secondItem="kOS-9C-iVX" secondAttribute="trailing" constant="8" id="0Y0-J3-MpZ"/>
+                <constraint firstItem="Mpz-e0-KC9" firstAttribute="centerY" secondItem="wLj-zz-EiA" secondAttribute="centerY" id="BPj-xW-sh7"/>
+                <constraint firstItem="wLj-zz-EiA" firstAttribute="top" secondItem="kOS-9C-iVX" secondAttribute="top" constant="-8" id="F7t-oP-hKX"/>
+                <constraint firstItem="wLj-zz-EiA" firstAttribute="bottom" secondItem="kOS-9C-iVX" secondAttribute="bottom" constant="8" id="TE0-cF-uWX"/>
+                <constraint firstItem="wLj-zz-EiA" firstAttribute="trailing" secondItem="Mpz-e0-KC9" secondAttribute="trailing" constant="8" id="Ztd-m8-itQ"/>
+                <constraint firstItem="kOS-9C-iVX" firstAttribute="leading" secondItem="wLj-zz-EiA" secondAttribute="leading" constant="20" id="wjB-hS-O49"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="albumPhotoImageView" destination="kOS-9C-iVX" id="vtR-ZZ-z7r"/>
+                <outlet property="albumPhotoLabel" destination="Mpz-e0-KC9" id="hXB-92-KV6"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="-556.47321428571422"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="no-internet-150" width="200" height="200"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
