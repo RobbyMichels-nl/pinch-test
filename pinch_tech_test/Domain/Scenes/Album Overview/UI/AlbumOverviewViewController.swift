@@ -75,16 +75,15 @@ extension AlbumOverviewViewController {
 extension AlbumOverviewViewController: UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        60
+        75
     }
 }
 
 extension AlbumOverviewViewController: CanConfigureViews {
 
     func configureProperties() {
-        view.backgroundColor = .white
-
+        tableView.backgroundColor = .systemGray6
         tableView.separatorStyle = .none
-        tableView.contentInset = .init(top: -1, left: 0, bottom: 0, right: 0)
+        tableView.contentInset = .init(top: 10, left: 0, bottom: 0, right: 0)
     }
 }
