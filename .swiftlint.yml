@@ -1,0 +1,19 @@
+disabled_rules:
+  - line_length
+  - function_body_length
+  - void_return
+  - closure_parameter_position
+opt_in_rules:
+  - operator_usage_whitespace
+file_length:
+  - 300
+type_name:
+  min_length: 3
+  max_length: 50
+variable_name:
+  min_length: 2
+  max_length: 50
+excluded:
+  - Pods
+  - fastlane
+  - Modules

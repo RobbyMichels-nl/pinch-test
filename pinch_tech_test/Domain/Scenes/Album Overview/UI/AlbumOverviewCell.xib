@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="AlbumOverviewCell" customModule="pinch_tech_test" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="149"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TlL-pD-e46">
+                    <rect key="frame" x="10" y="49" width="394" height="95"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="label jhsbsjhsb sjhbsjhbs sjhbsjhbs sjhbsjhbs s" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p8S-Gf-OSY">
+                            <rect key="frame" x="20" y="10" width="354" height="75"/>
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="p8S-Gf-OSY" firstAttribute="leading" secondItem="TlL-pD-e46" secondAttribute="leading" constant="20" id="Pzi-pj-eZj"/>
+                        <constraint firstItem="p8S-Gf-OSY" firstAttribute="top" secondItem="TlL-pD-e46" secondAttribute="top" constant="10" id="U4X-Yr-JRN"/>
+                        <constraint firstAttribute="bottom" secondItem="p8S-Gf-OSY" secondAttribute="bottom" constant="10" id="hky-BN-9B4"/>
+                        <constraint firstAttribute="trailing" secondItem="p8S-Gf-OSY" secondAttribute="trailing" constant="20" id="wwh-KK-Osm"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="TlL-pD-e46" secondAttribute="bottom" constant="5" id="8ie-P4-vRZ"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="TlL-pD-e46" secondAttribute="trailing" constant="10" id="fRc-Xt-Kln"/>
+                <constraint firstItem="TlL-pD-e46" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="10" id="hjQ-xM-x7c"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="top" secondItem="TlL-pD-e46" secondAttribute="top" constant="-5" id="m73-aF-yPX"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="albumNameLabel" destination="p8S-Gf-OSY" id="oqw-XC-z1w"/>
+                <outlet property="containerView" destination="TlL-pD-e46" id="xNU-A8-WoX"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="-137.61160714285714"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
