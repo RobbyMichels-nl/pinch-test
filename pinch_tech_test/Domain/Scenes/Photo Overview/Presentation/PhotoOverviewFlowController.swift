@@ -15,8 +15,8 @@ class PhotoOverviewFlowController: FlowController {
         AlbumPhotoOverviewAssembly(),
         PhotoDetailFlowAssembly()
     ])
-    private let album: Album
 
+    private let album: Album
     private var flowController: FlowController?
 
     init(album: Album) {
@@ -36,7 +36,6 @@ class PhotoOverviewFlowController: FlowController {
 extension PhotoOverviewFlowController: PhotoOverviewViewControllerDelegate {
 
     func albumDetailOverviewViewControllerDidSomething(controller: UIViewController?, albumPhoto: AlbumPhoto) {
-        // push AlbumDetailViewController
         flowController = assembler.resolver.resolve(FlowController.self, argument: albumPhoto)
         controller?.navigationController?.pushViewController(flowController?.start() ?? UIViewController(), animated: true)
     }

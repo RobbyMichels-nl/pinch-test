@@ -11,7 +11,7 @@ class CoreDataPersistenceStore {
 
     static let shared = CoreDataPersistenceStore()
 
-    let context: NSManagedObjectContext = NSManagedObjectContext(concurrencyType: .mainQueueConcurrencyType)
+    let context = NSManagedObjectContext(concurrencyType: .mainQueueConcurrencyType)
 
     private var managedObjectModel: NSManagedObjectModel?
     private let modelName = "Model"
@@ -26,7 +26,7 @@ class CoreDataPersistenceStore {
             do {
                 try context.save()
             } catch {
-                print("An error occurred while saving: \(error)")
+                debugPrint("An error occurred while saving: \(error)")
             }
         }
     }

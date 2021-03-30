@@ -24,7 +24,7 @@ class AlbumPhotoEntityRepository: EntityRepository<AlbumPhoto> {
             entity.urlString = responseEntity.url
             entity.thumbnailUrlString = responseEntity.thumbnailUrl
 
-            do{
+            do {
                 try managedContext.save()
             } catch {
                 debugPrint("Couldnt save entity: Album")

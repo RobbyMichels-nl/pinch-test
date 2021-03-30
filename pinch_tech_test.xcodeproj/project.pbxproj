@@ -64,7 +64,6 @@
 		7DF9DE5B260CD8BF008C468C /* AlbumService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF9DE5A260CD8BF008C468C /* AlbumService.swift */; };
 		7DF9DE60260CD8C8008C468C /* AlbumServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF9DE5F260CD8C8008C468C /* AlbumServiceProtocol.swift */; };
 		7DF9DE65260CD8D3008C468C /* AlbumConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF9DE64260CD8D3008C468C /* AlbumConverter.swift */; };
-		7DF9DE6A260CD8DC008C468C /* CanMapToDomainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF9DE69260CD8DC008C468C /* CanMapToDomainModel.swift */; };
 		7DF9DE6F260CD95B008C468C /* AlbumOverviewViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF9DE6E260CD95B008C468C /* AlbumOverviewViewModelProtocol.swift */; };
 		7DF9DE74260CD9A4008C468C /* GetAlbumPhotos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF9DE73260CD9A4008C468C /* GetAlbumPhotos.swift */; };
 		7DF9DE79260CD9AB008C468C /* GetAlbumPhotosProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF9DE78260CD9AB008C468C /* GetAlbumPhotosProtocol.swift */; };
@@ -164,7 +163,6 @@
 		7DF9DE5A260CD8BF008C468C /* AlbumService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumService.swift; sourceTree = "<group>"; };
 		7DF9DE5F260CD8C8008C468C /* AlbumServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumServiceProtocol.swift; sourceTree = "<group>"; };
 		7DF9DE64260CD8D3008C468C /* AlbumConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumConverter.swift; sourceTree = "<group>"; };
-		7DF9DE69260CD8DC008C468C /* CanMapToDomainModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanMapToDomainModel.swift; sourceTree = "<group>"; };
 		7DF9DE6E260CD95B008C468C /* AlbumOverviewViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumOverviewViewModelProtocol.swift; sourceTree = "<group>"; };
 		7DF9DE73260CD9A4008C468C /* GetAlbumPhotos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAlbumPhotos.swift; sourceTree = "<group>"; };
 		7DF9DE78260CD9AB008C468C /* GetAlbumPhotosProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAlbumPhotosProtocol.swift; sourceTree = "<group>"; };
@@ -378,7 +376,6 @@
 			children = (
 				7DBF387526090D86002130D3 /* FlowController.swift */,
 				7DBF38242608F3EB002130D3 /* CanConfigureViews.swift */,
-				7DF9DE69260CD8DC008C468C /* CanMapToDomainModel.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -799,7 +796,6 @@
 				7DF9DE65260CD8D3008C468C /* AlbumConverter.swift in Sources */,
 				7DBF38642608F695002130D3 /* AlbumOverviewViewModel.swift in Sources */,
 				7DBF38622608F695002130D3 /* AlbumOverviewViewController.swift in Sources */,
-				7DF9DE6A260CD8DC008C468C /* CanMapToDomainModel.swift in Sources */,
 				7D0DA8A5261219FB00EF8340 /* AlbumPhotoRepositoryProtocol.swift in Sources */,
 				7DBF38632608F695002130D3 /* AlbumOverviewFlowController.swift in Sources */,
 				7D0DA8DC26121BDC00EF8340 /* MainFlowAssembly.swift in Sources */,

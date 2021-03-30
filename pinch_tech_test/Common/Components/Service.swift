@@ -20,7 +20,7 @@ class Service {
     var httpMethod: HTTPMethod = .get
     var baseURL: String
     var endPoint: String
-    var parameters: Data?
+
     private var url: URL {
         URL(string: baseURL + endPoint)!
     }
